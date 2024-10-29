@@ -7,3 +7,8 @@ export const CategoriesApiResponse = z.object({
     })
   ),
 });
+
+export const SearchFilter = z.object({
+  ingredient: z.string(),
+  category: z.string(),
+});
