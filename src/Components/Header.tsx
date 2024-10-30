@@ -26,6 +26,13 @@ export default function Header() {
         })
     }
 
+    const scrollToPosition = (pixels: number) => {
+        window.scrollTo({
+            top: pixels,
+            behavior: 'smooth'
+        });
+    };
+
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
@@ -38,8 +45,7 @@ export default function Header() {
         }
 
         searchRecipes(searchFilters)
-
-
+        scrollToPosition(750);
     }
 
   return (
